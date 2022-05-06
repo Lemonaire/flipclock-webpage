@@ -2,14 +2,11 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-
 		<link rel="stylesheet" href="./css/flipclock.css">
 		<link rel="stylesheet" href="./css/style.css">
-
-		<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
-
-		<script src="./js/jquery.min.js"></script>		
-		<script src="./js/flipclock.js"></script>		
+		<script src="./js/jquery.min.js"></script>
+		<script src="./js/flipclock.js"></script>
+		<title>Flip Clock</title>
 	</head>
 	<body>
 
@@ -31,15 +28,17 @@
 			
 			$(document).ready(function() {
 				clock = $('.clock').FlipClock({
-					clockFace: 'TwelveHourClock',
-					showSeconds: false
+					clockFace: 'TwentyFourHourClock',
+					showSeconds: true
 				});
 			});
 			var month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
 			var week = ['Mon', 'Tues', 'wed', 'Thur', 'Fri', 'Sat', 'Sun'];
-			var d = new Date();
-			// document.getElementById('ShowDate').innerHTML = d.getFullYear() + "年" +(d.getMonth() + 1) + "月" + d.getDate() + "日" + ' 星期'+'日一二三四五六'.charAt(new Date().getDay());
-			document.getElementById('ShowDate').innerHTML = d.getFullYear() + "-" + month[d.getMonth()] + "-" + d.getDate() + ', ' + week[d.getDay()];
+			var curDate = new Date();
+			// 中文版显示
+			document.getElementById('ShowDate').innerHTML = curDate.getFullYear() + "年" +(curDate.getMonth() + 1) + "月" + curDate.getDate() + "日" + ' 星期'+'日一二三四五六'.charAt(new Date().getDay());
+			// 英文版显示
+			// document.getElementById('ShowDate').innerHTML = curDate.getFullYear() + "-" + month[curDate.getMonth()] + "-" + curDate.getDate() + ', ' + week[curDate.getDay()];
 		</script>
 
 	</body>

@@ -5,17 +5,25 @@
 }
 body
 {
-	display: flex;
+	/*display: flex;*/
+	/*text-align:center;*/
+	/*justify-content: center;*/
+	/*align-items: center;*/
+	/*!*min-height: 100vh;*!*/
+	/*background: #222;*/
+
+	/* 适配低版本 Safari */
+	display: -webkit-box;
+	-webkit-box-pack: center; /* justify-content */
+	-webkit-box-align: center; /* align-items */
 	text-align:center;
-	justify-content: center;
-	align-items: center;
 	/*min-height: 100vh;*/
 	background: #222;
 }
 .clock
 {
 	width: auto;
-	zoom: 4;
+	zoom: 2.1;
 }
 .flip-clock-dot
 {
@@ -33,7 +41,7 @@ h1 {
     /*font-family: sans-serif, Times, TimesNR, 'New Century Schoolbook', Georgia, 'New York', serif;*/
     color: #ccc;
 	text-align:center;
-	zoom: 4;
+	zoom: 3;
 }
 #box
 {

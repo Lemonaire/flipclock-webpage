@@ -1,5 +1,13 @@
 # Flip Clock Webpage
 
+魔改了一下，使之能适配我的 iPad 1（？
+
+（但是也仅仅能适配我的 iPad 1，因为懒得读这么长的代码做自适应……
+
+
+
+## Origin Document
+
 **link:** [clock.nicejob.xyz](http://clock.nicejob.xyz/) [中文版], [Github Pages](https://zyjacya-in-love.github.io/flipclock-webpage/) [ENG]
 
 ## Introduction

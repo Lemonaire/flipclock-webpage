@@ -169,7 +169,7 @@ var FlipClock;
 	 */
 	 
 	FlipClock = function(obj, digit, options) {
-		if(digit instanceof Object && digit instanceof Date === false) {
+		if(digit instanceof Object && !(digit instanceof Date)) {
 			options = digit;
 			digit = 0;
 		}
@@ -1514,6 +1514,10 @@ var FlipClock;
 		 */
 		 
 		getTime: function(date, showSeconds) {
+			console.log(showSeconds);
+			console.log(typeof showSeconds);
+			// console.log(date);
+
 			if(typeof showSeconds === "undefined") {
 				showSeconds = true;
 			}
@@ -1522,7 +1526,6 @@ var FlipClock;
 				date = this.getDateObject();
 			}
 
-			console.log(date);
 
 			
 			var hours = date.getHours();
